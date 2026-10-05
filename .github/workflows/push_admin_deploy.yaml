@@ -34,7 +34,20 @@ jobs:
         steps:
             - name: checkout repo
               uses: actions/checkout@v5
+            
+            - name: setup node
+              uses: actions/setup-node@v6
+              with:
+                node-version : 22
+            
+            - uses: pnpm/action-setup@v6
+              name: Install pnpm
+              with:
+                version: 10
+
+            - name: installing dependencies
+              run: pnpm i
 
             - name: running script
-              run: npm run start
+              run: pnpm run start
 
