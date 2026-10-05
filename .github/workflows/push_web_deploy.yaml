@@ -1,4 +1,4 @@
-name: CI App with githubactions
+name: CI App with githubactions with web
 on:
     push:
         branches: 

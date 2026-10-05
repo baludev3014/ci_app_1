@@ -1,10 +1,11 @@
-name: CI App with githubactions
+name: CI App with githubactions with admin
 on:
     push:
         branches: 
             - main
         paths: 
             - ./apps/admin/**
+
 defaults:
   run:
     working-directory: ./apps/admin
