@@ -1,0 +1,15 @@
+{
+  "name": "@ci_app_1/web",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "dependencies": {
+    "@ci_app_1/schemas" : "workspace:*"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}

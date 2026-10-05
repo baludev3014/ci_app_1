@@ -1,0 +1,21 @@
+{
+  "name": "ci_app_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:admin" : "turbo run start --filter=@ci_app_1/admin",
+    "start:web" : "turbo run start --filter=@ci_app_1/web"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.22.0",
+      "onFail": "download"
+    }
+  },
+  "type": "module"
+}

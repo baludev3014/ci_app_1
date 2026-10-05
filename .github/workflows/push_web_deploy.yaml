@@ -1,0 +1,39 @@
+name: CI App with githubactions
+on:
+    push:
+        branches: 
+            - main
+        paths: 
+            - ./apps/web/**
+defaults:
+  run:
+    working-directory: ./apps/web
+
+jobs:
+    
+    log:
+        runs-on: ubuntu-latest
+    
+        steps:
+             
+            - name: checkout repo
+              uses: checkout/actions@v5
+            
+            - name: logging app_name
+              run : echo ${{ github.repository_owner }}
+    
+    start:
+
+        strategy:
+            matrix:
+                os: ["windows-latest","macos-latest","ubuntu-latest"]
+
+        runs-on: ${{matrix.os}}
+        
+        steps:
+            - name: checkout repo
+              uses: checkout/actions@v5
+
+            - name: running script
+              run: npm run start
+        
