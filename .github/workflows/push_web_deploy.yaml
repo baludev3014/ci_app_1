@@ -24,6 +24,7 @@ jobs:
               run : echo ${{ github.repository_owner }}
     
     start:
+        needs: log
 
         strategy:
             matrix:
