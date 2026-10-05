@@ -4,8 +4,8 @@ on:
         branches: 
             - main
         paths: 
-            - ./apps/admin/**
-
+            - apps/admin/**
+            
 defaults:
   run:
     working-directory: ./apps/admin
@@ -18,7 +18,7 @@ jobs:
         steps:
              
             - name: checkout repo
-              uses: checkout/actions@v5
+              uses: actions/checkout@v5
             
             - name: logging app_name
               run : echo ${{ github.repository_owner }}
@@ -33,8 +33,8 @@ jobs:
         
         steps:
             - name: checkout repo
-              uses: checkout/actions@v5
+              uses: actions/checkout@v5
 
             - name: running script
-              run: pnpm run start
-        
+              run: npm run start
+
